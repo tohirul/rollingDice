@@ -34,8 +34,7 @@ init();
 // toggle function to remove elements from on screen on certain events
 const toggleRemove = () => {
     // buttons selected by DOM elements stored in a array
-    elements = [diceEl, btnHold, btnRoll, btnOver];
-
+    const elements = [diceEl, btnHold, btnRoll, btnOver];
     elements.forEach((element) => {
         element.classList.toggle("hidden");
     });
@@ -96,7 +95,8 @@ btnHold.onclick = () => {
     document.querySelector(`#score--${activePlayer}`).textContent =
         scores[activePlayer];
     // check the scores of current player
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 20) {
+        // console.log("winner");
         // winner
         playing = false; // game has been stopped
         toggleRemove(); // elements removed
