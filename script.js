@@ -95,7 +95,7 @@ btnHold.onclick = () => {
     document.querySelector(`#score--${activePlayer}`).textContent =
         scores[activePlayer];
     // check the scores of current player
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 120) {
         // console.log("winner");
         // winner
         playing = false; // game has been stopped
